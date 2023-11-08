@@ -1,10 +1,3 @@
-// Dupe code for accessing modals
-const formModal = document.querySelector(".form-modal");
-const formModalButton = document.querySelector(".form-modal-button");
-const nameModal = document.querySelector(".name-modal");
-const nameModalButton = document.querySelector(".name-modal-button");
-const submitButton = document.querySelector(".submit");
-
 function addToDom(query, content) {
   const container = document.querySelector(query);
   container.appendChild(content);
@@ -13,7 +6,6 @@ function addToDom(query, content) {
 function createElement(type, content, classList, textContent, onClick) {
   const element = document.createElement(type);
   if (classList) element.classList.add(...classList);
-
   if (textContent) element.textContent = textContent;
 
   if (content) element.innerHTML = content;
@@ -23,9 +15,14 @@ function createElement(type, content, classList, textContent, onClick) {
   return element;
 }
 
+function addContentToElement(element, content) {
+  element.innerHTML = content;
+}
+
 function Button(text, onClick) {
-  const button = createElement("button", null, ["button"], text, onClick)
-  return button;
+  const button = createElement("button", null, ["button", "hide"], text, onClick)
+
+  addToDom('.buttons', button);
 }
 
 function Modal(_title) {

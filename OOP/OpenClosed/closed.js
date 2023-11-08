@@ -30,6 +30,18 @@ function Rect(_width, _height) {
   };
 }
 
+function Triangle(_base, _height) {
+  const base = _base;
+  const height = _height;
+  const type = "triangle";
+
+  return {
+    base,
+    height,
+    type,
+  };
+}
+
 function getTotalAreas(shapes) {
   return shapes.reduce((total, shape) => {
     switch (shape.type) {
@@ -39,6 +51,8 @@ function getTotalAreas(shapes) {
         return (total += Math.PI * shape.radius * shape.radius);
       case "rect":
         return (total += shape.width * shape.height);
+      case "triangle":
+        return (total += (shape.base * shape.height) / 2);
       default:
         return total;
     }

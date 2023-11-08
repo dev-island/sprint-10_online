@@ -1,9 +1,11 @@
+// T
 class Bird {
   fly() {
     console.log('I can fly')
   }
 }
 
+// S
 class Duck extends Bird {
   quack() {
     console.log('I can quack')

@@ -14,7 +14,7 @@ open to extension, closed to modification
 
 If S is a subtype of T, then object of type T may be replaced with objects of type S
 
-4. Interface Segregation
+1. Interface Segregation
 
 When you have an interface, you need use every portion of the interface when implementing. It is invalid if an implementation of an interface does not implement all aspects of the interface
 

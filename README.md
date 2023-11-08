@@ -1,5 +1,10 @@
 # Sprint 10
 
+## wk 2
+- Separating Logic and UI
+- Webpack + tool chain + Blog project
+
+## wk 1
 ## Topics
 1. OOP
 2. Webpack
@@ -10,8 +15,8 @@
 3. Npm packages
 
 ## Projects
-1. Restaurant Page
-2. Todo List
+1. Todo List
 
 ## SubTopics
  - Double tap on separation of concerns
+

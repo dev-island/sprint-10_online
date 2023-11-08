@@ -36,6 +36,19 @@ function Rect(_width, _height) {
   };
 }
 
+function Triangle(_base, _height) {
+  const base = _base;
+  const height = _height;
+  
+  function getArea() {
+    return (base * height) / 2;
+  }
+
+  return {
+    getArea,
+  };
+}
+
 function getTotalAreas(shapes) {
   return shapes.reduce((total, shape) => {
     return (total += shape.getArea());
@@ -44,3 +57,4 @@ function getTotalAreas(shapes) {
 
 // We can add a new shape without having to refactor the code above.
 getTotalAreas([new Square(4), new Circle(2), new Rect(4, 5)]); // 62.83185307179586
+getTotalAreas([new Triangle(4, 3), new Circle(2), new Rect(4, 5)]); // 62.83185307179586

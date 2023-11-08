@@ -29,9 +29,11 @@ function makeSwimmingBirdSwim(bird) {
 
 const duck = new Duck();
 const penguin = new Penguin();
+const swimmingBird = new SwimmingBird();
 
 makeFlyingBirdFly(duck);
 //  Passes because we could swap out the duck for a flying bird
 // and it would still work
 // Same principle applies to the penguin, where we can swap it out for a swimming bird
 makeSwimmingBirdSwim(penguin);
+makeSwimmingBirdSwim(swimmingBird);
